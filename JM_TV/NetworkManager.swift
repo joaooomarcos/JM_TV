@@ -43,10 +43,26 @@ enum HTTPMethod {
     }
 }
 
+typealias HTTPHeaders = [String: String]
+
 class NetworkManager {
+    
     func request<T: Decodable>(url: URL, method: HTTPMethod = .get, parameters: [String: Any] = [:], headers: HTTPHeaders = [:], completion: @escaping (_ result: Result<T>) -> Void) {
-        AlamofireRequestManager().request(url: url, method: method.toAlamofire(), parameters: parameters, headers: headers, completion: completion)
+        
+        let allParams = self.addDefaultParams(parameters)
+        
+        AlamofireRequestManager().request(url: url, method: method.toAlamofire(), parameters: allParams, headers: headers, completion: completion)
     }
+    
+    private func addDefaultParams(_ inParams: [String: Any]) -> [String: Any] {
+        var params: [String: Any] = ["api_key": "d6390c4acae0196b3b9ff2e4cd6bb392",
+                                      "language": Locale.languageAndRegion]
+        
+        params += inParams
+        
+        return params
+    }
+
 }
 
 class AlamofireRequestManager {

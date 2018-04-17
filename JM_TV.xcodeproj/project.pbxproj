@@ -22,6 +22,8 @@
 		17A7428D2085A7A20036322C /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A7428C2085A7A20036322C /* APIEndpoints.swift */; };
 		17A7428F2085A7D60036322C /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A7428E2085A7D60036322C /* MovieAPI.swift */; };
 		17A742912085A7E10036322C /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742902085A7E10036322C /* MovieViewModel.swift */; };
+		17A742932085AC350036322C /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742922085AC350036322C /* Dictionary+Extensions.swift */; };
+		17A742952085B0860036322C /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742942085B0860036322C /* Locale+Extensions.swift */; };
 		88D36513600CE4A4E98FC361 /* Pods_JM_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */; };
 		AE1867C7C5672D9DE09739C6 /* Pods_JM_TVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB4001643133AAD45FE1707 /* Pods_JM_TVUITests.framework */; };
 		B92F98B870C4AA08977F511C /* Pods_JM_TVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */; };
@@ -67,6 +69,8 @@
 		17A7428C2085A7A20036322C /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		17A7428E2085A7D60036322C /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
 		17A742902085A7E10036322C /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		17A742922085AC350036322C /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		17A742942085B0860036322C /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB3C25DF4DBECB7922F5174 /* Pods-JM_TVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JM_TVUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JM_TVUITests/Pods-JM_TVUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +148,8 @@
 				17A7428C2085A7A20036322C /* APIEndpoints.swift */,
 				17A7428E2085A7D60036322C /* MovieAPI.swift */,
 				17A742902085A7E10036322C /* MovieViewModel.swift */,
+				17A742922085AC350036322C /* Dictionary+Extensions.swift */,
+				17A742942085B0860036322C /* Locale+Extensions.swift */,
 			);
 			path = JM_TV;
 			sourceTree = "<group>";
@@ -442,11 +448,13 @@
 				17A7428920859ACA0036322C /* JSONDecoder+Extensions.swift in Sources */,
 				17A74285208584FF0036322C /* Result.swift in Sources */,
 				17A7428D2085A7A20036322C /* APIEndpoints.swift in Sources */,
+				17A742952085B0860036322C /* Locale+Extensions.swift in Sources */,
 				1721C2A9208576AE00386076 /* ViewController.swift in Sources */,
 				1721C2A7208576AE00386076 /* AppDelegate.swift in Sources */,
 				17A7428F2085A7D60036322C /* MovieAPI.swift in Sources */,
 				17A7428B20859DED0036322C /* Movie.swift in Sources */,
 				17A7428120857F9E0036322C /* R.generated.swift in Sources */,
+				17A742932085AC350036322C /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,7 +629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68F4V28A64;
+				DEVELOPMENT_TEAM = KW44L7584U;
 				INFOPLIST_FILE = JM_TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 68F4V28A64;
+				DEVELOPMENT_TEAM = KW44L7584U;
 				INFOPLIST_FILE = JM_TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
