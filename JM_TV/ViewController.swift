@@ -35,11 +35,11 @@ class ViewController: UIViewController {
     }
     
     func oi(completion: @escaping (Result<Movie>) -> Void) {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/354912")
+        let url = MovieEndpoint.detail(354912).url
         let params: [String: Any] = ["api_key": "d6390c4acae0196b3b9ff2e4cd6bb392",
                                      "language": "en-US"]
         
-        NetworkManager().request(url: url!, parameters: params, completion: completion)
+        NetworkManager().request(url: url, parameters: params, completion: completion)
     }
 
 }
