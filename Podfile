@@ -10,6 +10,7 @@ target 'JM_TV' do
   
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'AlamofireNetworkActivityIndicator'
   pod 'AlamofireNetworkActivityLogger'
   pod 'R.swift'
   pod 'SwiftLint'

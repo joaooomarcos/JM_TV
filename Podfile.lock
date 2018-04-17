@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.7.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityIndicator (2.2.1):
+    - Alamofire (~> 4.7)
   - AlamofireNetworkActivityLogger (2.3.0):
     - Alamofire (~> 4.6)
   - R.swift (4.0.0):
@@ -12,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - AlamofireNetworkActivityIndicator
   - AlamofireNetworkActivityLogger
   - R.swift
   - SwiftLint
@@ -20,6 +23,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AlamofireImage
+    - AlamofireNetworkActivityIndicator
     - AlamofireNetworkActivityLogger
     - R.swift
     - R.swift.Library
@@ -28,11 +32,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  AlamofireNetworkActivityIndicator: aeac50e6ecb78ec71a5f1f29098bcf4ec2962910
   AlamofireNetworkActivityLogger: 6f3076652ab7fa6c819b59be08ea038d339e36d8
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: 370e1d3b58bbae2a0a82b3c92ff78e6363c9fa9a
+PODFILE CHECKSUM: 97be36d0f4bc997a66e0026e2ec71af7daec21bd
 
 COCOAPODS: 1.5.0
