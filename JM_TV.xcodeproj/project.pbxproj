@@ -14,6 +14,7 @@
 		1721C2B1208576AF00386076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1721C2AF208576AF00386076 /* LaunchScreen.storyboard */; };
 		1721C2BC208576AF00386076 /* JM_TVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2BB208576AF00386076 /* JM_TVTests.swift */; };
 		1721C2C7208576AF00386076 /* JM_TVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1721C2C6208576AF00386076 /* JM_TVUITests.swift */; };
+		17A7428120857F9E0036322C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A7428020857F9E0036322C /* R.generated.swift */; };
 		88D36513600CE4A4E98FC361 /* Pods_JM_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */; };
 		AE1867C7C5672D9DE09739C6 /* Pods_JM_TVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB4001643133AAD45FE1707 /* Pods_JM_TVUITests.framework */; };
 		B92F98B870C4AA08977F511C /* Pods_JM_TVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */; };
@@ -51,6 +52,7 @@
 		1721C2C2208576AF00386076 /* JM_TVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JM_TVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1721C2C6208576AF00386076 /* JM_TVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JM_TVUITests.swift; sourceTree = "<group>"; };
 		1721C2C8208576AF00386076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A7428020857F9E0036322C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB3C25DF4DBECB7922F5174 /* Pods-JM_TVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JM_TVUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JM_TVUITests/Pods-JM_TVUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				1721C2AD208576AF00386076 /* Assets.xcassets */,
 				1721C2AF208576AF00386076 /* LaunchScreen.storyboard */,
 				1721C2B2208576AF00386076 /* Info.plist */,
+				17A7428020857F9E0036322C /* R.generated.swift */,
 			);
 			path = JM_TV;
 			sourceTree = "<group>";
@@ -173,8 +176,9 @@
 			buildConfigurationList = 1721C2CB208576AF00386076 /* Build configuration list for PBXNativeTarget "JM_TV" */;
 			buildPhases = (
 				27260CAAE8CC25A2482ACD85 /* [CP] Check Pods Manifest.lock */,
-				1721C29F208576AE00386076 /* Sources */,
 				17A7427E20857CE80036322C /* Swift Lint */,
+				17A7427F20857F1B0036322C /* R.Swift */,
+				1721C29F208576AE00386076 /* Sources */,
 				1721C2A0208576AE00386076 /* Frameworks */,
 				1721C2A1208576AE00386076 /* Resources */,
 				5F0FE7C703AABF8974341FFF /* [CP] Embed Pods Frameworks */,
@@ -329,6 +333,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
+		17A7427F20857F1B0036322C /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
 		269A00855C30D88084F501E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +416,7 @@
 			files = (
 				1721C2A9208576AE00386076 /* ViewController.swift in Sources */,
 				1721C2A7208576AE00386076 /* AppDelegate.swift in Sources */,
+				17A7428120857F9E0036322C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

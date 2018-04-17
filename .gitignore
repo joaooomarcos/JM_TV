@@ -33,3 +33,6 @@ playground.xcworkspace
 
 # CocoaPods
 Pods/
+
+#R.Swfit
+*.generated.swift
