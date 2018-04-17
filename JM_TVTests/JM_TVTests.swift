@@ -6,10 +6,10 @@
 //  Copyright © 2018 JoaoMarcos. All rights reserved.
 //
 
-import XCTest
 @testable import JM_TV
+import XCTest
 
-class JM_TVTests: XCTestCase {
+class JMTVTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

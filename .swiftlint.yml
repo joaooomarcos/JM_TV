@@ -1,0 +1,35 @@
+warning_threshold: 50
+
+line_length:
+  warning: 120
+  error: 200
+  ignores_comments: true
+  ignores_function_declarations: true
+
+disabled_rules:
+  - trailing_whitespace
+
+opt_in_rules:
+  - empty_count
+  - array_init
+  - closure_end_indentation
+  - contains_over_first_not_nil
+  - explicit_init
+  - let_var_whitespace
+  - multiline_parameters
+  - object_literal
+  - overridden_super_call
+  - sorted_imports
+  - switch_case_on_newline
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+
+excluded:
+  - Pods
+  - MinhaSkySwiftTests
+  - MinhaSkySwiftUITests
+  - MinhaSkyTests
+  - MinhaSkyUnitTests
+  - fastlane
+  - Frameworks
+  - R.generated.swift

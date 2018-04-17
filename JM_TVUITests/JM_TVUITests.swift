@@ -8,7 +8,7 @@
 
 import XCTest
 
-class JM_TVUITests: XCTestCase {
+class JMTVUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
