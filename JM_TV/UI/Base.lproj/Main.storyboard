@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,9 +67,9 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L3p-4S-46G">
                                 <rect key="frame" x="16" y="16" width="382" height="29"/>
                                 <segments>
-                                    <segment title="Top Rated"/>
                                     <segment title="Now Playing"/>
                                     <segment title="Upcoming"/>
+                                    <segment title="Top Rated"/>
                                 </segments>
                                 <color key="tintColor" red="0.97647058819999999" green="0.84313725490000002" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -92,11 +93,61 @@
                     <connections>
                         <outlet property="filterSegmentedControl" destination="L3p-4S-46G" id="rHW-yh-1xm"/>
                         <outlet property="listCollectionView" destination="b2w-rY-6Fy" id="kkv-Mh-dDz"/>
+                        <segue destination="Mup-jI-pOG" kind="show" identifier="toMovieDetail" id="LHs-is-YvH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.3623188405797" y="132.88043478260872"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="zmU-5N-HeL">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Mup-jI-pOG" customClass="MovieDetailViewController" customModule="JM_TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="joK-jD-Zf2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="620"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-6E-T4h">
+                                <rect key="frame" x="24" y="273" width="366" height="323"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.83529411760000005" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-Ne-7sK" customClass="JMImageView" customModule="JM_TV" customModuleProvider="target">
+                                <rect key="frame" x="132" y="24" width="150" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IyO-Ne-7sK" secondAttribute="height" multiplier="2:3" id="HZk-th-jZn"/>
+                                    <constraint firstAttribute="width" constant="150" id="Y41-HA-AH2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipping" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0dT-sx-g9t" firstAttribute="trailing" secondItem="i4N-6E-T4h" secondAttribute="trailing" constant="24" id="6AX-9g-hcy"/>
+                            <constraint firstItem="i4N-6E-T4h" firstAttribute="top" secondItem="IyO-Ne-7sK" secondAttribute="bottom" constant="24" id="GY7-qA-MsG"/>
+                            <constraint firstItem="IyO-Ne-7sK" firstAttribute="centerX" secondItem="joK-jD-Zf2" secondAttribute="centerX" id="OML-pm-CvH"/>
+                            <constraint firstItem="i4N-6E-T4h" firstAttribute="leading" secondItem="0dT-sx-g9t" secondAttribute="leading" constant="24" id="jPX-SZ-kVU"/>
+                            <constraint firstItem="0dT-sx-g9t" firstAttribute="bottom" secondItem="i4N-6E-T4h" secondAttribute="bottom" constant="24" id="qa5-T2-oTA"/>
+                            <constraint firstItem="IyO-Ne-7sK" firstAttribute="top" secondItem="0dT-sx-g9t" secondAttribute="top" constant="24" id="w7h-1Q-0Jd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0dT-sx-g9t"/>
+                    </view>
+                    <connections>
+                        <outlet property="posterImageView" destination="IyO-Ne-7sK" id="Elm-qc-VU6"/>
+                        <outlet property="synopsisTextView" destination="i4N-6E-T4h" id="Yra-sD-pQO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOO-WK-L6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1966.6666666666667" y="132.88043478260872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nzg-XU-nyp">
@@ -106,6 +157,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="7c7-36-gFr">
                         <rect key="frame" x="0.0" y="20" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="barTintColor" red="0.97254901959999995" green="0.84313725490000002" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

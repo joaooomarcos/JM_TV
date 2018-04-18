@@ -11,10 +11,12 @@ class Movie: Decodable {
     var id: Int?
     var title: String?
     var posterPath: String?
+    var synopsis: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case posterPath = "poster_path"
+        case synopsis = "overview"
     }
 }

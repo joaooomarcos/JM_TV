@@ -58,8 +58,10 @@ class MoviesViewController: UIViewController {
     private func reloadLayout() {
         switch viewState {
         case .loading:
+            self.listCollectionView.isUserInteractionEnabled = false
             self.listCollectionView.reloadData()
         case .normal:
+            self.listCollectionView.isUserInteractionEnabled = true
             self.listCollectionView.reloadData()
         case .error:
             break
@@ -74,6 +76,11 @@ class MoviesViewController: UIViewController {
         })
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let typedInfo = R.segue.moviesViewController.toMovieDetail(segue: segue), let movieVM = sender as? MovieViewModel {
+            typedInfo.destination.movieVM = movieVM
+        }
+    }
 }
 
 // MARK: - Collection View Data Source
@@ -124,5 +131,11 @@ extension MoviesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+    }
+}
+
+extension MoviesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: R.segue.moviesViewController.toMovieDetail, sender: movies[indexPath.row])
     }
 }

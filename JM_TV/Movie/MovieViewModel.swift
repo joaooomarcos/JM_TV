@@ -9,9 +9,9 @@
 import Foundation
 
 enum FilterType: Int {
-    case topRated = 0
-    case nowPlaying
+    case nowPlaying = 0
     case upcoming
+    case topRated
 }
 
 class MovieViewModel {
@@ -24,6 +24,10 @@ class MovieViewModel {
     
     var title: String {
         return movie.title ?? ""
+    }
+    
+    var synopsis: String {
+        return movie.synopsis ?? ""
     }
     
     var coverParh: URL {

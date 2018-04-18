@@ -4,14 +4,9 @@ identifier_name:
   excluded:
     - id
 
-line_length:
-  warning: 150
-  error: 200
-  ignores_comments: true
-  ignores_function_declarations: true
-
 disabled_rules:
   - trailing_whitespace
+  - line_length
 
 opt_in_rules:
   - empty_count

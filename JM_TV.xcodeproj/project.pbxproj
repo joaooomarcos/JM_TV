@@ -34,6 +34,7 @@
 		17A742932085AC350036322C /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742922085AC350036322C /* Dictionary+Extensions.swift */; };
 		17A742952085B0860036322C /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742942085B0860036322C /* Locale+Extensions.swift */; };
 		17A742972085B95E0036322C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A742962085B95E0036322C /* Page.swift */; };
+		17A7429E20871A820036322C /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A7429D20871A820036322C /* MovieDetailViewController.swift */; };
 		88D36513600CE4A4E98FC361 /* Pods_JM_TV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */; };
 		AE1867C7C5672D9DE09739C6 /* Pods_JM_TVUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB4001643133AAD45FE1707 /* Pods_JM_TVUITests.framework */; };
 		B92F98B870C4AA08977F511C /* Pods_JM_TVTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */; };
@@ -91,6 +92,7 @@
 		17A742922085AC350036322C /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		17A742942085B0860036322C /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		17A742962085B95E0036322C /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		17A7429D20871A820036322C /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		5221000ED241BEA09FB1D685 /* Pods_JM_TVTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TVTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB3C25DF4DBECB7922F5174 /* Pods-JM_TVUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JM_TVUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JM_TVUITests/Pods-JM_TVUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81F8765DA1FF6B932334F568 /* Pods_JM_TV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JM_TV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,9 +181,9 @@
 				17A7429A2085BAC50036322C /* Web Connection */,
 				17A742992085BA780036322C /* Extensions */,
 				17A7429C2085BB0A0036322C /* Movie */,
+				17A7429F20871F5A0036322C /* MovieDetail */,
 				17A7429B2085BAE80036322C /* UI */,
 				171B0CE520870B3F005E477F /* Resources */,
-				171B0CE820870C95005E477F /* LoadingPosterCollectionViewCell.swift */,
 			);
 			path = JM_TV;
 			sourceTree = "<group>";
@@ -246,8 +248,17 @@
 				171B0CDA2086C43A005E477F /* MovieEndpoint.swift */,
 				171B0CDC2086C69C005E477F /* MoviesViewController.swift */,
 				171B0CD12086C30B005E477F /* PosterCollectionViewCell.swift */,
+				171B0CE820870C95005E477F /* LoadingPosterCollectionViewCell.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		17A7429F20871F5A0036322C /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17A7429D20871A820036322C /* MovieDetailViewController.swift */,
+			);
+			path = MovieDetail;
 			sourceTree = "<group>";
 		};
 		3BFFEB4AFADAA8B8721E51E5 /* Frameworks */ = {
@@ -605,6 +616,7 @@
 				17A742972085B95E0036322C /* Page.swift in Sources */,
 				17A742912085A7E10036322C /* MovieViewModel.swift in Sources */,
 				17A7428920859ACA0036322C /* JSONDecoder+Extensions.swift in Sources */,
+				17A7429E20871A820036322C /* MovieDetailViewController.swift in Sources */,
 				17A74285208584FF0036322C /* Result.swift in Sources */,
 				171B0CDD2086C69C005E477F /* MoviesViewController.swift in Sources */,
 				171B0CE920870C95005E477F /* LoadingPosterCollectionViewCell.swift in Sources */,
