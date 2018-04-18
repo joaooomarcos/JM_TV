@@ -6,4 +6,16 @@
 //  Copyright © 2018 JoaoMarcos. All rights reserved.
 //
 
-import Foundation
+class MovieAPI {
+    static func getNowPlaying(completion: @escaping (Result<Page<Movie>>) -> Void) {
+        NetworkManager().request(url: MovieEndpoint.nowPlaying.url, completion: completion)
+    }
+    
+    static func getUpcoming(completion: @escaping (Result<Page<Movie>>) -> Void) {
+        NetworkManager().request(url: MovieEndpoint.upcoming.url, completion: completion)
+    }
+    
+    static func getTopRated(completion: @escaping (Result<Page<Movie>>) -> Void) {
+        NetworkManager().request(url: MovieEndpoint.topRated.url, completion: completion)
+    }
+}

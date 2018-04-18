@@ -6,8 +6,6 @@
 //  Copyright © 2018 JoaoMarcos. All rights reserved.
 //
 
-import Foundation
-
 class Movie: Decodable {
     
     var id: Int?
