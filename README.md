@@ -1,7 +1,7 @@
 # JM_TV
 
 [![Platform](https://img.shields.io/badge/Platform-iOS-blue.svg?style=for-the-badge)](https://www.apple.com/br/ios/ios-11/)
-[![Compatibility](https://img.shields.io/badge/Compatibility-iPhone-lightgrey.svg?style=for-the-badge)](https://www.apple.com/br/iphone/)
+[![Compatibility](https://img.shields.io/badge/Compatibility-iPhone%20|%20iPad-lightgrey.svg?style=for-the-badge)](https://www.apple.com/br/iphone/)
 
 [![Platform](https://img.shields.io/badge/iOS_Version-11.0+-green.svg?style=for-the-badge)](https://www.apple.com/br/ios/ios-11/)
 [![Swift Version](https://img.shields.io/badge/swift-4.1-orange.svg?style=for-the-badge)](https://swift.org/)
